@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account Checker</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/aranda.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/Dakirby309-Simply-Styled-Security-Approved.ico">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <div id="navbar_main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/images/logosegurosalfa.jpg" id="logo-alfa" alt="...">
+                </div>
+                <div class="col-md-4">
+                    <h2 class="col-md-9 col-xs-9"> Account Checker
+                        <small id="label_filter"></small>
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 find-zone">
+                <div class="row">
+                    <h4 id="ajust-margin" class="col-md-4">Seleccione Banco:</h4>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-3"><label class="btn btn-action "><img src="/images/bvillas.png"
+                                                                                          alt="..."
+                                                                                          class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk1" id="item1" value="val1" class="hidden"
+                                        autocomplete="off"></label></div>
+                                <div class="col-md-3"><label class="btn btn-action"><img src="/images/bbogota.gif"
+                                                                                         alt="..."
+                                                                                         class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk2" id="item2" value="val2" class="hidden"
+                                        autocomplete="off"></label></div>
+                                <div class="col-md-3"><label class="btn btn-action"><img src="/images/boccidente.png"
+                                                                                         alt="..."
+                                                                                         class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk3" id="item3" value="val3" class="hidden"
+                                        autocomplete="off"></label></div>
+                                <div class="col-md-3"><label class="btn btn-action"><img src="/images/bpopular.png"
+                                                                                         alt="..."
+                                                                                         class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk4" id="item4" value="val4" class="hidden"
+                                        autocomplete="off"></label></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <div class="row">
+                            <div id="reduce-margin" class="col-md-11">
+                                <input type="text" id="input_search" class="form-control" name="search"
+                                       placeholder="Ingrese número de cédula del cliente">
+                            </div>
+
+                            <div class="col-md-1">
+                                <button id="btn-search" type="button" class="btn btn-action filter"><span
+                                        class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div id="upshot-modal" class="fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <button id="btn-back" type="button" class="btn btn-action col-md-1 col-xs-1" >
+                            <span class="glyphicon glyphicon-remove" data-dismiss="modal"></span>
+                        </button>
+                        <div class="col-md-10 col-xs-6">
+                            <h3>Confirmar identidad de : <span id="span-result">Juan Ortegón</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <h4 class="col-md-8">Valide si tiene:</h4>
+                    </div>
+                    <div class="row">
+                        <!--<div class="poster col-md-5"></div>-->
+                        <div class="col-md-10">
+
+                            <label class="checkbox-inline">
+                                <input type="checkbox" data-toggle="toggle" data-on="Si" data-off="No">¿Master?
+                            </label>
+
+
+                            <label class="checkbox-inline">
+                                <input type="checkbox" data-toggle="toggle" data-on="Si" data-off="No">¿ Visa ?
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <input type="checkbox" data-toggle="toggle" data-on="Si" data-off="No">¿Cuenta de Ahorros o
+                                Corriente?
+                            </label>
+
+                        </div>
+                        <br>
+
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <input type="text" id="input-master" class="form-control" name="search"
+                                           placeholder="Últimos 4 Digit.">
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" id="input-vis" class="form-control" name="search"
+                                           placeholder="Últimos 4 Digit.">
+                                </div>
+                                <div class="col-md-3" id="margin-input-account">
+                                    <input type="text" id="input-account" class="form-control" name="search"
+                                           placeholder="Últimos 4 Digit.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" id="upshot-valid">
+                        <h4 class="col-md-8 hidden-md">Resultados Encontrados:</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="dynamic-table">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info">
+                        <span class="glyphicon glyphicon-ok"></span> Validar
+                    </button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="layoutBottomWrapper" class="bottomWrapper">
+        <div class="layoutPageContent2">
+            <div>&nbsp;</div>
+            © 2016 BNP Paribas Cardif Seguros Colombia
+            <a href="publicBrowserAndSecurity.do" class="securityStdLink" title="Security Standards">Security
+                Standards</a>
+
+            <div id="layoutContentFooter">
+                <div id="privacyPledgeFooter">
+                    <p style="text-align: center;">The creditor and issuer of this card is Elan Financial
+                        Services,
+                        pursuant to a license from Visa U.S.A. Inc. or MasterCard International
+                        Incorporated.&nbsp;</p>
+                    <p style="text-align: center;">MasterCard is a registered trademark of MasterCard
+                        International
+                        Incorporated.</p>
+                    <p style="text-align: center;">American Express is a federally registered service mark of
+                        American
+                        Express and is used by Elan Financial Services pursuant to license.</p>
+                    <p style="text-align: center;"><!-- dynamic link (privacy_policy_and_terms_of_use): --> <a
+                            href="#"
+                            onclick="javascript: window.open('publicPrivacyPolicy.do', 'popupWindow', 'height=688,width=964,toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes'); return false;">Privacy
+                        Policy and Terms of Use</a>
+                    </p>
+
+                    <div class="environmentInfo">
+                        Trancore E PROD2-O
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/variables.js"></script>
+<script src="js/jsonRequest.js"></script>
+<script src="js/listeners.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/functionalities.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+
+
+</html>
